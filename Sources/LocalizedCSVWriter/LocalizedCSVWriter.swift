@@ -1,10 +1,10 @@
 import Foundation
-import CSVReader
 
-struct LocalizedCSVWriter
+public struct LocalizedCSVWriter
 {
     typealias LanguageCSV = [StringKey : [Language:String]]
     typealias StringKey = String
+    public typealias CSV = [StringKey:[StringKey:String]]
     
     enum Language: String
     {
@@ -19,7 +19,7 @@ struct LocalizedCSVWriter
     }
     
     
-    static func write(csv: CSVReader.CSV, path: String) {
+    public func write(csv: CSV, path: String) {
         guard !csv.values.isEmpty else {
             fatalError("No CSV Data Was Read")
         }
@@ -48,7 +48,7 @@ struct LocalizedCSVWriter
         
     }
     
-    private static func write(_ data: String, to filePath: URL) -> Bool {
+    private func write(_ data: String, to filePath: URL) -> Bool {
         do {
             try data.write(to: filePath, atomically: true, encoding: .utf8)
             return true
