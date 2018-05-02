@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CSVReader",
+        "repositoryURL": "/Users/yevgenybeygel/Projects/XCode/CSVReader",
+        "state": {
+          "branch": null,
+          "revision": "488c9e528af2e969466692c2e30b1653844d7588",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
